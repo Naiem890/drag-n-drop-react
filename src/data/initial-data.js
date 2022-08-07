@@ -1,6 +1,53 @@
-import { COMPONENT, ROW, COLUMN } from "./constants";
+import { nanoid } from "nanoid";
+export const SIDEBAR_ITEM = "sidebarItem";
+export const ROW = "row";
+export const COLUMN = "column";
+export const COMPONENT = "component";
 
-const initialData = {
+export const SIDEBAR_ITEMS = [
+  {
+    id: nanoid(3),
+    type: SIDEBAR_ITEM,
+    component: {
+      type: "input",
+      content: "Some input",
+    },
+  },
+  {
+    id: nanoid(3),
+    type: SIDEBAR_ITEM,
+    component: {
+      type: "name",
+      content: "Some name",
+    },
+  },
+  {
+    id: nanoid(3),
+    type: SIDEBAR_ITEM,
+    component: {
+      type: "email",
+      content: "Some email",
+    },
+  },
+  {
+    id: nanoid(3),
+    type: SIDEBAR_ITEM,
+    component: {
+      type: "phone",
+      content: "Some phone",
+    },
+  },
+  {
+    id: nanoid(3),
+    type: SIDEBAR_ITEM,
+    component: {
+      type: "image",
+      content: "Some image",
+    },
+  },
+];
+
+export const initialContainerData = {
   layout: [
     {
       type: ROW,
@@ -65,5 +112,3 @@ const initialData = {
     component4: { id: "component4", type: "phone", content: "Some phone" },
   },
 };
-
-export default initialData;

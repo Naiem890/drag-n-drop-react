@@ -61,8 +61,10 @@ body {
 
 .component {
   height: 60px;
-  padding: 10px;
-  background: #aaa;
+  border: 1px dashed black;
+  padding: 0.5rem 1rem;
+  background: white;
+  cursor: move;
 }
 
 .column {
