@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { createContext } from "react";
 import { initialContainerData, SIDEBAR_ITEMS } from "../data/initial-data";
+import DropZone from "./DropZone";
 import Row from "./Row";
 import SideBarItem from "./SideBarItem";
+import TrashZone from "./TrashZone";
 
 export const ComponentContext = createContext();
 
@@ -20,10 +22,17 @@ const Dashboard = () => {
         </div>
         <div className="pageContainer">
           <div className="page">
-            {layout.map((row) => (
-              <Row key={row.id} row={row} />
-            ))}
+            {layout.map((row) => {
+              return (
+                <>
+                  <DropZone />
+                  <Row key={row.id} row={row} />
+                </>
+              );
+            })}
+            <DropZone />
           </div>
+          <TrashZone />
         </div>
       </div>
     </ComponentContext.Provider>
